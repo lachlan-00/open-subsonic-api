@@ -8,12 +8,20 @@ description: >
 {{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
-// TODO
+{
+  "id": "vi-1"
+}
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
-// TODO
+{
+  "id" : "83"
+}
 {{< /tab >}}
 {{< /tabpane >}}
 
-| Field |  Type | Req. | OpenS. | Details |
-| --- | --- | --- | --- | --- |
+| Field | Type | Req. | OpenS. | Details |
+| ----- | ---- | ---- | ------ | ------- |
+| `id` | string | **Yes** | | The ID of the video file |
+| `captions` | Array of [`Captions`](../captions) | | | |
+| `audioTrack` | Array of [`AudioTrack`](../audioTrack) | | | |
+| `conversion` | Array of [`VideoConversion`](../videoConversion) | | | |
