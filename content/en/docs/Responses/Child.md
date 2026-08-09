@@ -7,7 +7,7 @@ description: >
   A media.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -43,6 +43,12 @@ description: >
   "comment": "This is a song comment",
   "sortName": "Polar expedition",
   "musicBrainzId": "189002e7-3285-4e2e-92a3-7f6c30d407a2",
+  "isrc": [
+    "USSM18300073",
+    "DELV42300297",
+    "DEE868300011",
+    "DEE868300007"
+  ],
   "genres": [
     {
       "name": "Hip-Hop"
@@ -116,7 +122,21 @@ description: >
     "trackPeak": 9.2,
     "albumPeak": 9,
     "baseGain": 0
-  }
+  },
+  "works": [
+    {
+      "name": "Symphony No. 5 in C minor, Op. 67",
+      "musicBrainzId": "d03bff61-26fc-301b-98ac-4d8e85771cbc"
+    }
+  ],
+  "movements": [
+    {
+      "name": "Andante con moto",
+      "number": 2,
+      "count": 4
+    }
+  ],
+  "groupings": ["Soundtrack", "Live"]
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
@@ -193,6 +213,7 @@ description: >
 | `comment` | `string` | No |  **Yes**  | The comment tag of the song. |
 | `sortName` | `string` | No |  **Yes**   | The song sort name. |
 | `musicBrainzId` | `string` | No |  **Yes**   | The track MusicBrainzID. |
+| `isrc` | Array of `string` | No |  **Yes**   | The track ISRC(s). |
 | `genres` | Array of [`ItemGenre`](../itemgenre) | No | **Yes**  | The list of all genres of the song. |
 | `artists` | Array of [`ArtistID3`](../artistid3) | No | **Yes**  | The list of all song artists of the song. (Note: Only the required [`ArtistID3`](../artistid3) fields should be returned by default)|
 | `displayArtist` | `string` | No |  **Yes**   | The single value display artist. |
@@ -203,7 +224,9 @@ description: >
 | `moods` | Array of `string` | No | **Yes**  | The list of all moods of the song. |
 | `replayGain` | [`ReplayGain`](../replaygain) | No | **Yes**  | The replaygain data of the song. |
 | `explicitStatus` | `string` | No |  **Yes**    | Returns "explicit", "clean" or "". (For songs extracted from tags "ITUNESADVISORY": 1 = explicit, 2 = clean, MP4 "rtng": 1 or 4 = explicit, 2 = clean. See [`albumID3`](../albumid3) for albums) |
-
+| `works` | Array of [`Work`](../work) | No |  **Yes**   | The list of works associated with the song. |
+| `movements` | Array of [`Movement`](../movement) | No |  **Yes**   | The list of movements associated with the song. |
+| `groupings` | Array of `string` | No |  **Yes**   | The list of groupings associated with the song. |
 
 {{< alert color="warning" title="OpenSubsonic" >}}
 New fields are added:
@@ -213,6 +236,7 @@ New fields are added:
 - `comment`
 - `sortName`
 - `musicBrainzId`
+- `isrc`
 - `genres`
 - `artists`
 - `displayArtist`
@@ -223,6 +247,9 @@ New fields are added:
 - `moods`
 - `replayGain`
 - `explicitStatus`
+- `works`
+- `movements`
+- `groupings`
 
 **Note**: All OpenSubsonic added fields are **optionals**. But if a server support a field it **must** return it with an empty / default value when not present in it's database so that clients knows what the server supports.
 

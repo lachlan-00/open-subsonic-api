@@ -5,7 +5,7 @@ description: >
   A bookmark.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -83,7 +83,7 @@ description: >
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `position` | `long` | **Yes** |     | Bookmark position in seconds |
+| `position` | `long` | **Yes** |     | Bookmark position in milliseconds |
 | `username` | `string` | **Yes** |     | Username |
 | `comment` | `string` | No|     | Bookmark comment |
 | `created` | `string` | **Yes** |     | Bookmark creation date [ISO 8601]|

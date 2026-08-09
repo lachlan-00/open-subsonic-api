@@ -7,7 +7,7 @@ description: >
   An album from ID3 tags.
 ---
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -76,10 +76,12 @@ description: >
         {
             "disc": 0,
             "title": "Disc 0 title"
+            "coverArt": "42"
         },
         {
             "disc": 2,
             "title": "Disc 1 title"
+            "coverArt": "6547"
         }
     ]
 }

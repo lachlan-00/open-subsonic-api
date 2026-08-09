@@ -6,7 +6,7 @@ categories:
 OpenSubsonic:
 - Addition
 description: >
-    List the OpenSubsonic extensions supported by this server.
+  List the OpenSubsonic extensions supported by this server.
 ---
 
 `http://your-server/rest/getOpenSubsonicExtensions` OpenSubsonic version [1](../../opensubsonic-versions)
@@ -27,7 +27,7 @@ Takes no extra parameters.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested `openSubsonicExtensions` element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -47,6 +47,18 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
             },
             {
                 "name": "transcodeOffset",
+                "versions": [
+                    1
+                ]
+            },
+            {
+                "name": "sonicSimilarity",
+                "versions": [
+                    1
+                ]
+            },
+            {
+                "name": "topSongsByArtistId",
                 "versions": [
                     1
                 ]

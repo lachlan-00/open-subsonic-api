@@ -4,7 +4,7 @@ linkTitle: "updateUser"
 categories:
 - User management
 description: >
-    Modifies an existing user on the server.
+  Modifies an existing user on the server.
 ---
 
 `http://your-server/rest/updateUser` Since [1.10.1](../../subsonic-versions)
@@ -18,7 +18,7 @@ Modifies an existing user on the server.
 | `username` | **Yes** |  |     | The name of the user. |
 | `password` | No  |   |    | The password of the user, either in clear text of hex-encoded (see above). |
 | `email` | No  |   |    | The email address of the user. |
-| `ldapAuthenticated` | No  | |      | Whether the user is authenicated in LDAP. |
+| `ldapAuthenticated` | No  | |      | Whether the user is authenticated in LDAP. |
 | `adminRole` | No  |   |    | Whether the user is administrator. |
 | `settingsRole` | No  |  |     | Whether the user is allowed to change personal settings and password. |
 | `streamRole` | No  |   |    | Whether the user is allowed to play files. |
@@ -41,7 +41,7 @@ Modifies an existing user on the server.
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

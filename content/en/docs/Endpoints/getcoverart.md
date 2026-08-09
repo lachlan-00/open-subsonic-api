@@ -1,10 +1,12 @@
 ---
 title: "getCoverArt"
 linkTitle: "getCoverArt"
+opensubsonic:
+- Clarification
 categories:
 - Media retrieval
 description: >
-    Returns a cover art image.
+  Returns a cover art image.
 ---
 
 `http://your-server/rest/getCoverArt` Since [1.0.0](../../subsonic-versions)
@@ -13,10 +15,16 @@ Returns a cover art image.
 
 ### Parameters
 
-| Parameter | Req. | OpenS. | Default | Comment |
-| --- | --- | --- | --- | --- |
-| `id` | **Yes** |     | The coverArt ID. Returned by most entities likes [`Child`](../../responses/child) or [`AlbumID3`](../../responses/albumid3) |
-| `size` | No  |     | If specified, scale image to this size. |
+| Parameter | Req.    | OpenS. | Default | Comment |
+| --------- | ------- | ------ | ------- | --- |
+| `id`      | **Yes** |        | The coverArt ID. Returned by most entities likes [`Child`](../../responses/child) or [`AlbumID3`](../../responses/albumid3) | |
+| `size`    | No      |        | If specified, scale image to this size. | |
+
+{{< alert color="warning" title="OpenSubsonic" >}}
+In the original Subsonic, the `id` could refer to several entities: song, album or artist.
+
+For OpenSubsonic servers, `id` refers to coverArt ID only.
+{{< /alert >}}
 
 ### Example
 

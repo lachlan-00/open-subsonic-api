@@ -1,6 +1,8 @@
 ---
 title: "getSimilarSongs"
-linkTitle: "getSimilarSongs [OS]"
+linkTitle: "getSimilarSongs"
+opensubsonic:
+- Clarification
 categories:
 - Browsing
 description: >
@@ -18,6 +20,12 @@ Returns a random collection of songs from the given artist and similar artists, 
 | `id` | **Yes** |  |   | The artist, album or song ID. |
 | `count` | No  | |50  | Max number of songs to return. |
 
+{{< alert color="warning" title="OpenSubsonic" >}}
+In the original Subsonic, the specification for [`getSimilarSongs2`](../getsimilarsongs2) implies that it should be used instead of this endpoint if the client and/or server organizes by ID3 tags.
+
+For OpenSubsonic servers, `getSimilarSongs` may be used instead of `getSimilarSongs2` when organizing by ID3 tags, and there are no differences in results returned when using artist IDs.
+{{< /alert >}}
+
 ### Example
 
 {{< alert color="primary" >}} `http://your-server/rest/getSimilarSongs.view?id=123&u=demo&p=demo&v=1.13.0&c=AwesomeClientName&f=json` {{< /alert >}}
@@ -26,7 +34,7 @@ Returns a random collection of songs from the given artist and similar artists, 
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`similarSongs`](../../responses/similarsongs) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -103,7 +111,6 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "status": "ok",
     "version": "1.16.1",
     "similarSongs": {
-      "totalCount": 2,
       "song": [
         {
           "id": "300000060",

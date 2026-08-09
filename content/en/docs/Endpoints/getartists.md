@@ -23,9 +23,9 @@ Similar to [`getIndexes`](../getindexes), but organizes music according to ID3 t
 
 ### Result
 
-A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`artists`](../../responses/artists) element on success.
+A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`artists`](../../responses/artistsid3) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {

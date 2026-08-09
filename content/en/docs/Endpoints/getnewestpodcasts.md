@@ -4,7 +4,7 @@ linkTitle: "getNewestPodcasts [OS]"
 categories:
 - Podcast
 description: >
-    Returns the most recently published Podcast episodes.
+  Returns the most recently published Podcast episodes.
 ---
 
 `http://your-server/rest/getNewestPodcasts` Since [1.13.0](../../subsonic-versions)
@@ -25,7 +25,7 @@ Returns the most recently published Podcast episodes.
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`newestPodcasts`](../../responses/newestpodcasts) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -107,4 +107,4 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
 
 | Field |  Type | Req. | OpenS. | Details |
 | --- | --- | --- | --- | --- |
-| `newestPodcasts` | [`NewestPodcasts`](../../responses/newestpodcasts) | **Yes** |     | The podacsts |
+| `newestPodcasts` | [`NewestPodcasts`](../../responses/newestpodcasts) | **Yes** |     | The podcasts |

@@ -3,10 +3,12 @@ title: "savePlayQueue"
 linkTitle: "savePlayQueue [OS]"
 opensubsonic:
 - Change
+- Clarification
+- Errata
 categories:
 - Bookmarks
 description: >
-    Saves the state of the play queue for this user.
+  Saves the state of the play queue for this user.
 ---
 
 `http://your-server/rest/savePlayQueue` Since [1.12.0](../../subsonic-versions)
@@ -18,8 +20,18 @@ Saves the state of the play queue for this user. This includes the tracks in the
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `id` | No |  |   | ID of a song in the play queue. Use one `id` parameter for each song in the play queue. |
-| `current` | No  |   |  | The ID of the current playing song. |
+| `current` | Yes (subsonic) / No (OpenSubsonic)*  |   |  | The ID of the current playing song. |
 | `position` | No  |  |   | The position in milliseconds within the currently playing song. |
+
+{{< alert color="warning" title="Errata/OpenSubsonic" >}}
+\* In the original Subsonic, despite the claims that `current` is optional, it was required and **must** be in the list of `id`.
+
+**Note**: For OpenSubsonic servers, `id` is optional. Send a call without any parameters to clear the currently saved queue.
+
+For OpenSubsonic servers only, `current` is required **unless** `id` is empty.
+
+If `position` is empty, servers should treat the position as 0.
+{{< /alert >}}
 
 ### Example
 
@@ -29,7 +41,7 @@ Saves the state of the play queue for this user. This includes the tracks in the
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
@@ -51,8 +63,3 @@ An empty [`subsonic-response`](../../responses/subsonic-response) element on suc
 }
 {{< /tab >}}
 {{< /tabpane >}}
-
-{{< alert color="warning" title="OpenSubsonic" >}}
-**Note** `id` is optional. Send a call without any parameters to clear the currently saved queue.
-{{< /alert >}}
-

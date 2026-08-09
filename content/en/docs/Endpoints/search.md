@@ -4,7 +4,7 @@ linkTitle: "search"
 categories:
 - Searching
 description: >
-    Returns a listing of files matching the given search criteria. Supports paging through the result.
+  Returns a listing of files matching the given search criteria. Supports paging through the result.
 ---
 
 `http://your-server/rest/search` Since [1.0.0](../../subsonic-versions)
@@ -18,7 +18,7 @@ Returns a listing of files matching the given search criteria. Supports paging t
 | Parameter | Req. | OpenS. | Default | Comment |
 | --- | --- | --- | --- | --- |
 | `artist` | No  ||       | Artist to search for. |
-| `album` | No  | |      | Album to searh for. |
+| `album` | No  | |      | Album to search for. |
 | `title` | No  | |      | Song title to search for. |
 | `any` | No  |  |     | Searches all fields. |
 | `count` | No  | |  20  | Maximum number of results to return. |
@@ -33,7 +33,7 @@ Returns a listing of files matching the given search criteria. Supports paging t
 
 A [`subsonic-response`](../../responses/subsonic-response) element with a nested [`searchResult`](../../responses/searchresult) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 // TODO

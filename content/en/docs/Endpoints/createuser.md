@@ -4,7 +4,7 @@ linkTitle: "createUser"
 categories:
 - User management
 description: >
-    Creates a new user on the server.
+  Creates a new user on the server.
 ---
 
 `http://your-server/rest/createUser` Since [1.1.0](../../subsonic-versions)
@@ -18,7 +18,7 @@ Creates a new user on the server, using the following parameters:
 | `username` | **Yes** |  |   | The name of the new user. |
 | `password` | **Yes** |  |   | The password of the new user, either in clear text of hex-encoded (see above). |
 | `email` | **Yes** |   |  | The email address of the new user. |
-| `ldapAuthenticated` | No  || false | Whether the user is authenicated in LDAP. |
+| `ldapAuthenticated` | No  || false | Whether the user is authenticated in LDAP. |
 | `adminRole` | No  | |false | Whether the user is administrator. |
 | `settingsRole` | No  | |true | Whether the user is allowed to change personal settings and password. |
 | `streamRole` | No  || true | Whether the user is allowed to play files. |
@@ -41,7 +41,7 @@ Creates a new user on the server, using the following parameters:
 
 An empty [`subsonic-response`](../../responses/subsonic-response) element on success.
 
-{{< tabpane persistLang=false >}}
+{{< tabpane persist=false >}}
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
