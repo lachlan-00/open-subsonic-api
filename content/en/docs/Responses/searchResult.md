@@ -156,4 +156,4 @@ description: >
 |-------------|-----------------------------|---------|--------|-------------------------------|
 | `match`     | Array of [`Child`](../child) |         |        | Search results                |
 | `offset`    | `int`                       | **Yes** |        | Starting list offset          |
-| `totalHits` | `int`                       | **Yes** |        | Total results from the search |
+| `totalHits` | `int`                       | **Yes** |        | Total results from the search. May be greater than the number of `match` entries returned when the `count` parameter limits the page size. |

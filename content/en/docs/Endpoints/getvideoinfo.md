@@ -36,7 +36,20 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     "serverVersion": "8.0.0",
     "openSubsonic": true,
     "videoInfo": {
-      "id": "vi-1"
+      "id": "vi-1",
+      "captions": [
+        { "id": "0", "name": "Planes 2.srt" }
+      ],
+      "audioTrack": [
+        { "id": "1", "name": "English", "languageCode": "eng" },
+        { "id": "3", "name": "Danish", "languageCode": "dan" },
+        { "id": "4", "name": "Finnish", "languageCode": "fin" },
+        { "id": "5", "name": "Norwegian", "languageCode": "nor" },
+        { "id": "6", "name": "Swedish", "languageCode": "swe" }
+      ],
+      "conversion": [
+        { "id": "37", "bitRate": 1000 }
+      ]
     }
   }
 }
@@ -47,7 +60,20 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
       "status" : "ok",
       "version" : "1.16.1",
       "videoInfo" : {
-         "id" : "83"
+         "id" : "7058",
+         "captions" : [
+           { "id" : "0", "name" : "Planes 2.srt" }
+         ],
+         "audioTrack" : [
+           { "id" : "1", "name" : "English", "languageCode" : "eng" },
+           { "id" : "3", "name" : "Danish", "languageCode" : "dan" },
+           { "id" : "4", "name" : "Finnish", "languageCode" : "fin" },
+           { "id" : "5", "name" : "Norwegian", "languageCode" : "nor" },
+           { "id" : "6", "name" : "Swedish", "languageCode" : "swe" }
+         ],
+         "conversion" : [
+           { "id" : "37", "bitRate" : 1000 }
+         ]
       }
    }
 }

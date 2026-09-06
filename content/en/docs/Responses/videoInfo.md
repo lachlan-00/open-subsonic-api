@@ -9,12 +9,38 @@ description: >
 {{< tab header="**Example**:" disabled=true />}}
 {{< tab header="OpenSubsonic" lang="json">}}
 {
-  "id": "vi-1"
+  "id": "vi-1",
+  "captions": [
+    { "id": "0", "name": "Planes 2.srt" }
+  ],
+  "audioTrack": [
+    { "id": "1", "name": "English", "languageCode": "eng" },
+    { "id": "3", "name": "Danish", "languageCode": "dan" },
+    { "id": "4", "name": "Finnish", "languageCode": "fin" },
+    { "id": "5", "name": "Norwegian", "languageCode": "nor" },
+    { "id": "6", "name": "Swedish", "languageCode": "swe" }
+  ],
+  "conversion": [
+    { "id": "37", "bitRate": 1000 }
+  ]
 }
 {{< /tab >}}
 {{< tab header="Subsonic" lang="json" >}}
 {
-  "id" : "83"
+  "id" : "7058",
+  "captions" : [
+    { "id" : "0", "name" : "Planes 2.srt" }
+  ],
+  "audioTrack" : [
+    { "id" : "1", "name" : "English", "languageCode" : "eng" },
+    { "id" : "3", "name" : "Danish", "languageCode" : "dan" },
+    { "id" : "4", "name" : "Finnish", "languageCode" : "fin" },
+    { "id" : "5", "name" : "Norwegian", "languageCode" : "nor" },
+    { "id" : "6", "name" : "Swedish", "languageCode" : "swe" }
+  ],
+  "conversion" : [
+    { "id" : "37", "bitRate" : 1000 }
+  ]
 }
 {{< /tab >}}
 {{< /tabpane >}}

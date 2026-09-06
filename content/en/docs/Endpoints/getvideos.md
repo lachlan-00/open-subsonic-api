@@ -124,6 +124,18 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
             "playCount" : 1,
             "created" : "2021-02-23T04:21:29.040Z",
             "type" : "video"
+         }, {
+            "id" : "81",
+            "isDir" : false,
+            "title" : "Lisa Simpson playing a Beer Jug as her new instrument",
+            "size" : 16967352,
+            "contentType" : "video/mp4",
+            "suffix" : "mp4",
+            "path" : "Lisa Simpson playing a Beer Jug as her new instrument-fTGVV_4DNYI.mp4",
+            "isVideo" : true,
+            "playCount" : 0,
+            "created" : "2021-02-23T04:25:12.040Z",
+            "type" : "video"
          } ]
       }
    }
