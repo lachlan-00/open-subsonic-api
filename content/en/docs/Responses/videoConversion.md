@@ -17,7 +17,8 @@ description: >
 {{< tab header="Subsonic" lang="json" >}}
 {
   "id" : "37",
-  "bitRate" : 1000
+  "bitRate" : 1000,
+  "audioTrackId" : 1
 }
 {{< /tab >}}
 {{< /tabpane >}}
@@ -26,4 +27,4 @@ description: >
 | ----- | ---- | ---- | ------ | ------- |
 | `id` | string | **Yes** | | The ID of a transcoded version of the video file |
 | `bitRate` | int | No | | File bitrate, in Kbps |
-| `audioTrackId` | int | No | **Yes** | The ID of the audio track this version carries |
+| `audioTrackId` | int | No | | The ID of the audio track this version carries |
