@@ -48,7 +48,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
         { "id": "6", "name": "Swedish", "languageCode": "swe" }
       ],
       "conversion": [
-        { "id": "37", "bitRate": 1000 }
+        { "id": "37", "bitRate": 1000, "audioTrackId": 1 }
       ]
     }
   }
@@ -72,7 +72,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
            { "id" : "6", "name" : "Swedish", "languageCode" : "swe" }
          ],
          "conversion" : [
-           { "id" : "37", "bitRate" : 1000 }
+           { "id" : "37", "bitRate" : 1000, "audioTrackId" : 1 }
          ]
       }
    }
@@ -87,7 +87,7 @@ A [`subsonic-response`](../../responses/subsonic-response) element with a nested
     <audioTrack id="4" name="Finnish" languageCode="fin"/>
     <audioTrack id="5" name="Norwegian" languageCode="nor"/>
     <audioTrack id="6" name="Swedish" languageCode="swe"/>
-    <conversion id="37" bitRate="1000"/>
+    <conversion id="37" bitRate="1000" audioTrackId="1"/>
   </videoInfo>
 </subsonic-response>
 {{< /tab >}}

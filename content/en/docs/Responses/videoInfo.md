@@ -21,7 +21,7 @@ description: >
     { "id": "6", "name": "Swedish", "languageCode": "swe" }
   ],
   "conversion": [
-    { "id": "37", "bitRate": 1000 }
+    { "id": "37", "bitRate": 1000, "audioTrackId": 1 }
   ]
 }
 {{< /tab >}}
@@ -39,7 +39,7 @@ description: >
     { "id" : "6", "name" : "Swedish", "languageCode" : "swe" }
   ],
   "conversion" : [
-    { "id" : "37", "bitRate" : 1000 }
+    { "id" : "37", "bitRate" : 1000, "audioTrackId" : 1 }
   ]
 }
 {{< /tab >}}

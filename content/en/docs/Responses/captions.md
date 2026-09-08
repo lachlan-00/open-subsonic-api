@@ -23,5 +23,5 @@ description: >
 
 | Field | Type | Req. | OpenS. | Details |
 | ----- | ---- | ---- | ------ | ------- |
-| `id` | string | **Yes** | | The ID of a transcoded version of the video file |
+| `id` | string | **Yes** | | The ID of the caption track |
 | `name` | string | No | | Subtitle track name |
