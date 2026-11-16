@@ -49,5 +49,5 @@ description: >
 | ----- | ---- | ---- | ------ | ------- |
 | `id` | string | **Yes** | | The ID of the video file |
 | `captions` | Array of [`Captions`](../captions) | | | |
-| `audioTrack` | Array of [`AudioTrack`](../audioTrack) | | | |
-| `conversion` | Array of [`VideoConversion`](../videoConversion) | | | |
+| `audioTrack` | Array of [`AudioTrack`](../audiotrack) | | | |
+| `conversion` | Array of [`VideoConversion`](../videoconversion) | | | |
